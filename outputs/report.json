@@ -1,0 +1,21 @@
+{
+  "rows": 6,
+  "columns": {
+    "name": {
+      "missing": 0,
+      "non_empty": 6
+    },
+    "age": {
+      "missing": 1,
+      "non_empty": 5
+    },
+    "city": {
+      "missing": 2,
+      "non_empty": 4
+    },
+    "salary": {
+      "missing": 1,
+      "non_empty": 5
+    }
+  }
+}
