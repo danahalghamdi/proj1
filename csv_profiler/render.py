@@ -12,13 +12,14 @@ def write_json(report: dict, path: str | Path) -> None:
         encoding="utf-8",
     )
 
-
 def write_markdown(report: dict, path: str | Path) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
 
+    summary = report.get("summary", {})
     columns = report.get("columns", {})
-    rows = report.get("rows", 0)
+
+    rows = summary.get("rows", 0)
 
     lines: list[str] = []
     lines.append("# CSV Profiling Report\n")
@@ -29,7 +30,8 @@ def write_markdown(report: dict, path: str | Path) -> None:
     lines.append("| Column | Missing |")
     lines.append("|--------|---------|")
 
-    for col, stats in columns.items():
+    for col, info in columns.items():
+        stats = info.get("stats", {})
         missing = stats.get("missing", 0)
         lines.append(f"| {col} | {missing} |")
 

@@ -11,5 +11,3 @@
 | age | 1 |
 | city | 2 |
 | salary | 1 |
-## Notes
-- The CSV file was updated by adding two more rows.

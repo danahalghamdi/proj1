@@ -1,21 +1,89 @@
 {
-  "rows": 6,
+  "source": null,
+  "summary": {
+    "rows": 6,
+    "columns": 4,
+    "column_names": [
+      "name",
+      "age",
+      "city",
+      "salary"
+    ]
+  },
   "columns": {
     "name": {
-      "missing": 0,
-      "non_empty": 6
+      "type": "text",
+      "stats": {
+        "count": 6,
+        "missing": 0,
+        "unique": 6,
+        "top": [
+          [
+            "Aisha",
+            1
+          ],
+          [
+            "Ali",
+            1
+          ],
+          [
+            "Fahad",
+            1
+          ],
+          [
+            "Noor",
+            1
+          ],
+          [
+            "Salem",
+            1
+          ]
+        ]
+      }
     },
     "age": {
-      "missing": 1,
-      "non_empty": 5
+      "type": "number",
+      "stats": {
+        "count": 5,
+        "missing": 1,
+        "unique": 5,
+        "min": 23.0,
+        "max": 35.0,
+        "mean": 28.8
+      }
     },
     "city": {
-      "missing": 2,
-      "non_empty": 4
+      "type": "text",
+      "stats": {
+        "count": 4,
+        "missing": 2,
+        "unique": 3,
+        "top": [
+          [
+            "Riyadh",
+            2
+          ],
+          [
+            "Dammam",
+            1
+          ],
+          [
+            "Jeddah",
+            1
+          ]
+        ]
+      }
     },
     "salary": {
-      "missing": 1,
-      "non_empty": 5
+      "type": "number",
+      "stats": {
+        "count": 5,
+        "missing": 1,
+        "unique": 5,
+        "min": 9000.0,
+        "max": 18000.0,
+        "mean": 13000.0
+      }
     }
   }
 }
