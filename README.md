@@ -34,9 +34,9 @@ Run the profiler with parameters:
 PYTHONPATH=. python csv_profiler/cli.py data/sample.csv --out-dir outputs
 ```
 
-- **CLI Parameters:**
-csv_path   : Path to the input CSV file (required)
---out-dir  : Output directory for generated reports (default: outputs/)
+**CLI Parameters:**
+- `csv_path` : Path to the input CSV file (required)
+- `--out-dir` : Output directory for generated reports (default: outputs/)
 
 ## Output
 outputs/report.json
