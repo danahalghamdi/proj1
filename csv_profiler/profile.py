@@ -1,4 +1,5 @@
 from __future__ import annotations
+from csv_profiler.models import ColumnProfile #بكج المجلد***٣**
 
 def get_columns(rows: list[dict[str, str]]) -> list[str]:
     if not rows:
@@ -10,14 +11,13 @@ def basic_profile(rows: list[dict[str, str]]) -> dict:
     cols = get_columns(rows)
 
     report: dict = {
-        # optional for now
         "source": None,
         "summary": {
             "rows": len(rows),
             "columns": len(cols),
             "column_names": cols,
         },
-        "columns": {},
+        "columns": [],
     }
 
     for col in cols:
@@ -29,15 +29,24 @@ def basic_profile(rows: list[dict[str, str]]) -> dict:
         else:
             stats = text_stats(values)
 
-        report["columns"][col] = {
-            "type": typ,
-            "stats": stats,
-        }
+        total = len(rows)
+        missing = stats["missing"]
+        unique = stats["unique"]
+
+        cp = ColumnProfile(
+            name=col,
+            inferred_type=typ,
+            total=total,
+            missing=missing,
+            unique=unique,
+        )
+
+        col_dict = cp.to_dict()
+        col_dict["stats"] = stats
+        report["columns"].append(col_dict)
 
     return report
 
- 
- # Shared helpers
 
 MISSING = {"", "na", "n/a", "null", "none", "nan"}
 

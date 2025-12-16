@@ -10,9 +10,14 @@
       "salary"
     ]
   },
-  "columns": {
-    "name": {
+  "columns": [
+    {
+      "name": "name",
       "type": "text",
+      "total": 6,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 6,
       "stats": {
         "count": 6,
         "missing": 0,
@@ -41,8 +46,13 @@
         ]
       }
     },
-    "age": {
+    {
+      "name": "age",
       "type": "number",
+      "total": 6,
+      "missing": 1,
+      "missing_pct": 16.666666666666668,
+      "unique": 5,
       "stats": {
         "count": 5,
         "missing": 1,
@@ -52,8 +62,13 @@
         "mean": 28.8
       }
     },
-    "city": {
+    {
+      "name": "city",
       "type": "text",
+      "total": 6,
+      "missing": 2,
+      "missing_pct": 33.333333333333336,
+      "unique": 3,
       "stats": {
         "count": 4,
         "missing": 2,
@@ -74,8 +89,13 @@
         ]
       }
     },
-    "salary": {
+    {
+      "name": "salary",
       "type": "number",
+      "total": 6,
+      "missing": 1,
+      "missing_pct": 16.666666666666668,
+      "unique": 5,
       "stats": {
         "count": 5,
         "missing": 1,
@@ -85,5 +105,5 @@
         "mean": 13000.0
       }
     }
-  }
+  ]
 }

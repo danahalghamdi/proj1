@@ -17,7 +17,7 @@ def write_markdown(report: dict, path: str | Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
 
     summary = report.get("summary", {})
-    columns = report.get("columns", {})
+    columns = report.get("columns", [])
 
     rows = summary.get("rows", 0)
 
@@ -30,8 +30,9 @@ def write_markdown(report: dict, path: str | Path) -> None:
     lines.append("| Column | Missing |")
     lines.append("|--------|---------|")
 
-    for col, info in columns.items():
-        stats = info.get("stats", {})
+    for c in columns:
+        col = c["name"]
+        stats = c.get("stats", {})
         missing = stats.get("missing", 0)
         lines.append(f"| {col} | {missing} |")
 
