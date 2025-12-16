@@ -21,6 +21,7 @@ From the project root:
 
 ```bash
 PYTHONPATH=src python main.py
+```
 
 ## Data Parameter
 - **CSV file path**: Path to the CSV file to be analyzed.
