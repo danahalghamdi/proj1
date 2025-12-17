@@ -20,8 +20,22 @@ A simple Python tool to analyze CSV files and generate basic profiling reports.
 - `csv_profiler/render.py`  ## Render Markdown and JSON reports
 - `csv_profiler/cli.py`     ## Command-line interface using Typer
 - `main.py`                 ## Run the profiler (core logic)
-- `app.py`                  ## Streamlit web application (Part 2)
+- `app.py`                  ## Streamlit web application 
 
+
+## --------------------
+## Requirements
+## --------------------
+This project requires the following Python packages:
+
+- typer (for the CLI interface)
+- streamlit (for the web application)
+
+Install using uv:
+```bash
+uv pip install typer streamlit
+
+```
 ## --------------------
 ## Part 1: Generate Reports (JSON & Markdown)
 ## --------------------
@@ -40,7 +54,11 @@ Run the profiler with parameters:
 ```bash
 PYTHONPATH=. uv run python3 csv_profiler/cli.py data/sample.csv --out-dir outputs
 ```
-
+## View CLI options
+To display all available CLI parameters:
+```bash
+PYTHONPATH=. uv run python3 csv_profiler/cli.py --help
+```
 **CLI Parameters:**
 - `csv_path` : Path to the input CSV file (required)
 - `--out-dir` : Output directory for generated reports (default: outputs/)
