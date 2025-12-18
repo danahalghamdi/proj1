@@ -37,6 +37,10 @@ uv pip install typer streamlit
 
 ```
 ## --------------------
+## Platform note
+## --------------------
+> On Windows, replace `python3` with `python`.
+## --------------------
 ## Part 1: Generate Reports (JSON & Markdown)
 ## --------------------
 ## Run the core profiler from the project root:
